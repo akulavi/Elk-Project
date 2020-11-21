@@ -25,8 +25,8 @@ Load balancing ensures that the application will be highly efficient in addition
 - The security ascpect that load balancers protct is Denail of Sevice Attacks (DoS). The advantage of a jump box is that it helps to isolate privileged assets so that they are not directly in contact with potentially compromised workstations.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+- Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -42,11 +42,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 110.175.190.61
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by SSH.
+- The Jump Box is allowed access the the ELK machine. The IP address allowed to access the ELK Server is 110.175.190.61
 
 A summary of the access policies in place can be found in the table below.
 
@@ -65,6 +65,8 @@ The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
 - ...
+- 
+- 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -92,5 +94,3 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
