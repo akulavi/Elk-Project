@@ -46,7 +46,7 @@ Only the Jump box machine can accept connections from the Internet. Access to th
 - 110.175.190.61
 
 Machines within the network can only be accessed by SSH.
-- The Jump Box is allowed access the the ELK machine. The IP address allowed to access the ELK Server is 110.175.190.61
+- The Jump Box is allowed access the ELK machine. The IP address allowed to access the ELK Server is 110.175.190.61
 
 A summary of the access policies in place can be found in the table below.
 
