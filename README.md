@@ -52,8 +52,8 @@ A summary of the access policies in place can be found in the table below.
 
 | Name      | Publicly Accessible | Allowed IP Addresses |
 |-----------|---------------------|----------------------|
-| Jump Box  | Yes                 | 10.0.0.1 10.0.0.2    |
-| ELK Server| No                  |                      |
+| Jump Box  | No                  | 10.0.0.1             |
+| ELK Server| No                  | 110.175.190.61       |
 
 ### Elk Configuration
 
@@ -77,6 +77,9 @@ This ELK server is configured to monitor the following machines:
 - Web-2 IP address 10.0.0.6
 
 We have installed the following Beats on these machines:
+- Filebeat
+- Metricbeat
+- Packetbeat
 - Winlogbeat
 
 These Beats allow us to collect the following information from each machine:
